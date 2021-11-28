@@ -1,0 +1,6 @@
+#!/bin/bash
+
+RUNNER=${RUNNER:-podman}
+NAME=${NAME:-sidequest}
+
+"$RUNNER" run -it --name "$NAME" --replace sidequest-ubuntu
