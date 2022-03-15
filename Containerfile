@@ -22,7 +22,7 @@ RUN git clone https://github.com/SideQuestVR/SideQuest.git
 WORKDIR /SideQuest/
 
 # Checkout latest version
-RUN git checkout v0.10.25
+RUN git checkout v0.10.27
 
 # Install SideQuest dependencies
 RUN yarn install
