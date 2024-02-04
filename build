@@ -1,0 +1,5 @@
+#!/bin/bash
+
+RUNNER=${RUNNER:-podman}
+
+"$RUNNER" build -t sidequest-debian .

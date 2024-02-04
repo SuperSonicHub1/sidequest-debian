@@ -1,0 +1,10 @@
+#!/bin/bash
+
+RUNNER=${RUNNER:-podman}
+NAME=${NAME:-sidequest-debian}
+DIR=${DIR:-"$PWD"}
+
+
+id=$($RUNNER create "$NAME")
+$RUNNER cp "$id:/SideQuest/dist/SideQuest_0.10.39_amd64.deb" "$DIR"
+$RUNNER rm -v "$id"

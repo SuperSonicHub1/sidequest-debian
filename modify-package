@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+
+import json
+
+BUILD_OPTIONS = {
+	"target": [
+		"deb"
+	],
+	"maintainer": "Kyle Williams <kyle.anthony.williams2@gmail.com>"
+}
+
+with open("package.json") as f:
+	package = json.load(f)
+
+package['build']['linux'] = BUILD_OPTIONS
+
+with open("package.json", 'w') as f:
+	package = json.dump(package, f)
